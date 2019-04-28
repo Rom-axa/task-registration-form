@@ -55,8 +55,6 @@ function login($user) {
         setcookie("user_auth_key", $auth_key, time()+3600*12);
     } else {
         $_SESSION['user.id'] = $user['id'];
-        var_dump($form_data);
-        exit();
     }
     header('Location: ' .get_url('index'));
     exit();
