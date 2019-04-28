@@ -1,0 +1,133 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+html, body {
+     min-height: 100vh; 
+}
+body {
+    background: lightgray;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 250;
+}
+em { font-size: 12px;padding-left: 5px; }
+
+/* usefull classes START */
+.mt-5 { margin-top: 50px!important; }
+.my-3 { margin-top: 30px; margin-bottom: 30px;  }
+.my-1 { margin-top: 10px; margin-bottom: 10px; }
+.text-center { text-align: center; }
+.btn { border: 0px; padding: 10px 15px 10px 15px !important; font-size: 20px; border-radius: 5px; cursor: pointer; height: 45px; }
+.btn:hover { background: lightgray; }
+.pointer { cursor: pointer; }
+.d-flex { display: flex; }
+.justify-content-between { justify-content: space-between; }
+.display-1 { font-size : 33px }
+.bold { font-weight: bold; }
+.mw-50 { max-width: 50%; }
+.image-cover { width: 100%;height: auto; }
+
+/* usefeull classes END*/
+
+/* header START*/
+header ul.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    list-style: none;
+}
+ul.nav li {
+    margin: 0 10px 0 10px;
+}
+ul.nav li > a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #2a6ec6;
+    font-weight: 500;
+}
+ul.nav li a:hover {
+    color: #2873d5; 
+}
+ul.nav li.nav-right {
+    position: absolute;
+    right: 100px;
+}
+/* header END */
+
+/* content START */
+.container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 5px;
+    margin: auto;
+    padding: 10px;
+    max-width: 1000px;
+    border: 1px solid gray;
+    background: white;
+}
+.box-content {
+    padding: 10px;
+    border: 1px solid gray;
+    background: white;
+}
+.col {
+    padding: 10px;
+    grid-column: 2/9;
+}
+/* content END */
+
+/* form START */
+.col form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.form-group label {
+    font-size: 22px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.form-group input {
+    height: 30px;
+    font-size: 15px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.form-group > .image-file {
+    padding-left: 0px!important;
+}
+
+/* for validation */
+.has-success {
+    color: #539c53 !important;
+}
+.has-success input {
+    border: 1px solid;
+    border-color: #539c53 !important;
+}
+.has-success .image-file {
+    border: none;
+}
+.has-error {
+    color: firebrick!important;
+}
+.has-error .image-file {
+    border: none;
+}
+.has-error input {
+    border: 1px solid;
+    border-color: firebrick!important;
+}
+/*for validation END*/
+
+/* form END */
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><?= htmlspecialchars($page_now) ?></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <ul class="nav box-content mh-5">
+                <?php if($USER['isGuest']) : ?>
+                    <li>
+                        <a href="<?= get_url('registration') ?>">
+                            registration
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?= get_url('login') ?>">
+                            login
+                        </a>
+                    </li>
+                <?php else : ?>
+                    <li>
+                        <a href="<?= get_url('logout') ?>">
+                            logout
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?= get_url('profile') ?>">
+                            profile
+                        </a>
+                    </li>
+                    <li class="nav-right">
+                        Hello, <?= $USER['username'] ?>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </header>
+        <main>
+            <section>
+                <div class="container mt-5 box-content">
+                    <div class="col">
+                        <?= $content ?>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src ="js/validators.js"></script>
+    </body>
+</html>
